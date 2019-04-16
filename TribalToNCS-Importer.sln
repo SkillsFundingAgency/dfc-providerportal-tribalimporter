@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "TribalToNCS-Importer", "src\TribalToNCS-Importer\TribalToNCS-Importer.dtproj", "{C12BB312-82C5-4DCC-85A8-7611D3DD7870}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C12BB312-82C5-4DCC-85A8-7611D3DD7870}.Development|Default.ActiveCfg = Development
+		{C12BB312-82C5-4DCC-85A8-7611D3DD7870}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {649D8C6C-2756-4600-8228-030635088AF6}
+	EndGlobalSection
+EndGlobal
