@@ -1,18 +1,18 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="4/8/2019 4:36:46 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="TORNADO"
   DTS:CreatorName="TORNADO\ToloFreak"
-  DTS:DTSID="{0396F4C8-3839-4E5D-84BB-278F33C207F8}"
+  DTS:DTSID="{AF66CB83-98C0-4F63-B7E4-C2CB290811D3}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1100.123"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="59"
-  DTS:VersionGUID="{C1C1A5C6-EE60-4DAC-90FA-884444E829B7}">
+  DTS:VersionBuild="78"
+  DTS:VersionGUID="{F4995762-C9EF-4841-8CCD-06057B67F261}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -362,7 +362,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Address]</property>
+                  name="OpenRowset">[Tribal].[Address]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1120,7 +1120,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Course]</property>
+                  name="OpenRowset">[Tribal].[Course]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2280,7 +2280,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[CourseInstance]</property>
+                  name="OpenRowset">[Tribal].[CourseInstance]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -2978,7 +2978,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[CourseInstanceStartDate]</property>
+                  name="OpenRowset">[Tribal].[CourseInstanceStartDate]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3280,7 +3280,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[CourseInstanceVenue]</property>
+                  name="OpenRowset">[Tribal].[CourseInstanceVenue]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3609,7 +3609,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[GeoLocation]</property>
+                  name="OpenRowset">[Tribal].[GeoLocation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3762,13 +3762,13 @@
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[GeoLocation]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Tribal].[GeoLocation]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[GeoLocation]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Tribal].[GeoLocation]) [refTable]
 where [refTable].[Postcode] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4291,7 +4291,7 @@ where [refTable].[Postcode] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[LearningAim]</property>
+                  name="OpenRowset">[LARS].[LearningAim]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -4569,13 +4569,13 @@ where [refTable].[Postcode] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[Provider]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Tribal].[Provider]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[Provider]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Tribal].[Provider]) [refTable]
 where [refTable].[ProviderId] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -4714,7 +4714,7 @@ where [refTable].[ProviderId] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [Provider] SET ProviderName = ?, Ukprn = ?, [Loans24Plus] = ?, [RecordStatusId] = ?  WHERE ProviderId = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [Tribal].[Provider] SET ProviderName = ?, Ukprn = ?, [Loans24Plus] = ?, [RecordStatusId] = ?, UPIN = ?, TradingName = ?, NationalApprenticeshipProvider = ?, MarketingInformation = ?, Email = ?, Website = ?, Telephone = ? WHERE ProviderId = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -4762,10 +4762,57 @@ where [refTable].[ProviderId] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[RecordStatusId]" />
                     <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[UPIN]"
+                      cachedDataType="i4"
+                      cachedName="UPIN"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[UPIN]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[TradingName]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="TradingName"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[TradingName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[NationalApprenticeshipProvider]"
+                      cachedDataType="bool"
+                      cachedName="NationalApprenticeshipProvider"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[NationalApprenticeshipProvider]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[MarketingInformation]"
+                      cachedDataType="wstr"
+                      cachedLength="900"
+                      cachedName="MarketingInformation"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[MarketingInformation]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[Email]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Email"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[Email]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[Website]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Website"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[Website]" />
+                    <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[Telephone]"
+                      cachedDataType="wstr"
+                      cachedLength="30"
+                      cachedName="Telephone"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[Telephone]" />
+                    <inputColumn
                       refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProviderId]"
                       cachedDataType="i4"
                       cachedName="ProviderId"
-                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[ProviderId]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -4826,6 +4873,88 @@ where [refTable].[ProviderId] = ?</property>
                           name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="bool"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="wstr"
+                      length="900"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      dataType="wstr"
+                      length="30"
+                      name="Param_10">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      dataType="i4"
+                      name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4877,7 +5006,7 @@ where [refTable].[ProviderId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Provider]</property>
+                  name="OpenRowset">[Tribal].[Provider]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7110,13 +7239,13 @@ where [refTable].[ProviderId] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[ProviderUser]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Tribal].[ProviderUser]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[ProviderUser]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Tribal].[ProviderUser]) [refTable]
 where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -7270,7 +7399,7 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ProviderUser]</property>
+                  name="OpenRowset">[Tribal].[ProviderUser]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7739,7 +7868,7 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[AspNetRoles]</property>
+                  name="OpenRowset">[Identity].[AspNetRoles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -7905,13 +8034,13 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[AspNetRoles]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Identity].[AspNetRoles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[AspNetRoles]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Identity].[AspNetRoles]) [refTable]
 where [refTable].[Id] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -8207,13 +8336,13 @@ where [refTable].[Id] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[AspNetUserRoles]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Identity].[AspNetUserRoles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[AspNetUserRoles]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Identity].[AspNetUserRoles]) [refTable]
 where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -8368,7 +8497,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[AspNetUserRoles]</property>
+                  name="OpenRowset">[Identity].[AspNetUserRoles]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -9081,11 +9210,11 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Users\OLE DB Command"
+              refId="Package\Data Flow Users\OLE DB Command 1"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
               description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
+              name="OLE DB Command 1"
               usesDispositions="true"
               version="2">
               <properties>
@@ -9098,7 +9227,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [AspNetUsers] SET [Email] = ?, [UserName] = ?, [Name] = ?, [IsDeleted] = ?, EmailConfirmed = ?  WHERE Id = ? </property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [Identity].[AspNetUsers] SET [Email] = ?, [UserName] = ?, [Name] = ?, [IsDeleted] = ?, EmailConfirmed = ?  WHERE Id = ? </property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -9106,7 +9235,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Users\OLE DB Command.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Users\OLE DB Command 1.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[TargetConnection]"
                   connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
@@ -9114,56 +9243,56 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input]"
+                  refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input]"
                   errorOrTruncationOperation="Command Execution"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[Email]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Email]"
                       cachedDataType="wstr"
                       cachedLength="256"
                       cachedName="Email"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[Email]" />
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[UserName]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[UserName]"
                       cachedDataType="wstr"
                       cachedLength="256"
                       cachedName="UserName"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[UserName]" />
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[Name]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Name]"
                       cachedDataType="nText"
                       cachedName="Name"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[Name]" />
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[IsDeleted]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[IsDeleted]"
                       cachedDataType="bool"
                       cachedName="IsDeleted"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[IsDeleted]" />
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[EmailConfirmed]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[EmailConfirmed]"
                       cachedDataType="bool"
                       cachedName="EmailConfirmed"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[EmailConfirmed]" />
                     <inputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].Columns[Id]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].Columns[Id]"
                       cachedDataType="wstr"
                       cachedLength="128"
                       cachedName="Id"
-                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      externalMetadataColumnId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Data Flow Users\AspNetUsers.Outputs[OLE DB Source Output].Columns[Id]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       dataType="wstr"
                       length="256"
                       name="Param_0">
@@ -9175,7 +9304,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       dataType="wstr"
                       length="256"
                       name="Param_1">
@@ -9187,7 +9316,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       dataType="nText"
                       name="Param_2">
                       <properties>
@@ -9198,7 +9327,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       dataType="bool"
                       name="Param_3">
                       <properties>
@@ -9209,7 +9338,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       dataType="bool"
                       name="Param_4">
                       <properties>
@@ -9220,7 +9349,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       dataType="wstr"
                       length="450"
                       name="Param_5">
@@ -9236,29 +9365,29 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Output]"
+                  refId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Output]"
                   exclusionGroup="1"
                   name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Error Output]"
+                  refId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input]">
+                  synchronousInputId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Users\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Users\OLE DB Command 1.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -9282,7 +9411,7 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[AspNetUsers]</property>
+                  name="OpenRowset">[Identity].[AspNetUsers]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -9672,13 +9801,13 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[AspNetUsers]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Identity].[AspNetUsers]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[AspNetUsers]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Identity].[AspNetUsers]) [refTable]
 where [refTable].[Id] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -9804,7 +9933,7 @@ where [refTable].[Id] = ?</property>
           <paths>
             <path
               refId="Package\Data Flow Users.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Users\OLE DB Command.Inputs[OLE DB Command Input]"
+              endId="Package\Data Flow Users\OLE DB Command 1.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Users\UserId Lookup.Outputs[Lookup Match Output]" />
             <path
@@ -9851,7 +9980,7 @@ where [refTable].[Id] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Venue]</property>
+                  name="OpenRowset">[Tribal].[Venue]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -10548,7 +10677,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [Address]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[Address]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10564,7 +10693,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [Course]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[Course]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10580,7 +10709,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [CourseInstance]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[CourseInstance]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10596,7 +10725,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [CourseInstanceStartDate]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[CourseInstanceStartDate]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10612,7 +10741,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [CourseInstanceVenue]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[CourseInstanceVenue]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10628,7 +10757,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [LearningAim]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [LARS].[LearningAim]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -10644,7 +10773,7 @@ where [refTable].[Id] = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [Venue] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [Tribal].[Venue] " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -10817,27 +10946,27 @@ where [refTable].[Id] = ?</property>
         <NodeLayout
           Size="167,42"
           Id="Package\Data Flow Address"
-          TopLeft="818,87" />
+          TopLeft="766,83" />
         <NodeLayout
           Size="162,42"
           Id="Package\Data Flow Course"
-          TopLeft="525,291" />
+          TopLeft="504,289" />
         <NodeLayout
           Size="202,42"
           Id="Package\Data Flow CourseInstance"
-          TopLeft="511,360" />
+          TopLeft="490,358" />
         <NodeLayout
           Size="247,42"
           Id="Package\Data Flow CourseInstanceStartDate"
-          TopLeft="494,500" />
+          TopLeft="473,498" />
         <NodeLayout
           Size="232,42"
           Id="Package\Data Flow CourseInstanceVenue"
-          TopLeft="499,428" />
+          TopLeft="478,426" />
         <NodeLayout
           Size="187,42"
           Id="Package\Data Flow GeoLocation"
-          TopLeft="811,154" />
+          TopLeft="759,150" />
         <NodeLayout
           Size="188,42"
           Id="Package\Data Flow LearningAim"
@@ -10865,27 +10994,35 @@ where [refTable].[Id] = ?</property>
         <NodeLayout
           Size="159,43"
           Id="Package\Data Flow Venue"
-          TopLeft="831,284" />
+          TopLeft="779,280" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Truncate Address"
+          TopLeft="715,18" />
         <NodeLayout
           Size="156,42"
           Id="Package\Truncate Course"
-          TopLeft="527,223" />
+          TopLeft="506,221" />
         <NodeLayout
           Size="205,42"
           Id="Package\Truncate CourseInstance"
-          TopLeft="502,157" />
+          TopLeft="481,155" />
         <NodeLayout
           Size="241,42"
           Id="Package\Truncate CourseInstanceStartDate"
-          TopLeft="485,90" />
+          TopLeft="464,88" />
         <NodeLayout
           Size="236,42"
           Id="Package\Truncate CourseInstanceVenue"
-          TopLeft="432,21" />
+          TopLeft="421,20" />
         <NodeLayout
           Size="182,42"
           Id="Package\Truncate LearningAim"
           TopLeft="229,229" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Truncate Venue"
+          TopLeft="771,215" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="90,55">
@@ -10921,17 +11058,17 @@ where [refTable].[Id] = ?</property>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-36.9783183500793" />
+                    End="0,-33.9783183500793" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-36.9783183500793"
-                    Point2="0,-40.9783183500793"
-                    Point3="4,-40.9783183500793" />
+                    Point1="0,-33.9783183500793"
+                    Point2="0,-37.9783183500793"
+                    Point3="4,-37.9783183500793" />
                   <mssgle:LineSegment
-                    End="134.333333333333,-40.9783183500793" />
+                    End="134.333333333333,-37.9783183500793" />
                   <mssgle:CubicBezierSegment
-                    Point1="134.333333333333,-40.9783183500793"
-                    Point2="138.333333333333,-40.9783183500793"
-                    Point3="138.333333333333,-44.9783183500793" />
+                    Point1="134.333333333333,-37.9783183500793"
+                    Point2="138.333333333333,-37.9783183500793"
+                    Point3="138.333333333333,-41.9783183500793" />
                   <mssgle:LineSegment
                     End="138.333333333333,-74.5" />
                 </mssgle:SegmentCollection>
@@ -10944,7 +11081,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="604.75,199">
+          TopLeft="583.75,197">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10966,7 +11103,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="609,333">
+          TopLeft="588,331">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -10988,7 +11125,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="613.5,402">
+          TopLeft="592.5,400">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11010,7 +11147,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 13]"
-          TopLeft="616.25,470">
+          TopLeft="595.25,468">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11022,6 +11159,140 @@ where [refTable].[Id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,22.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 14]"
+          TopLeft="636.333333333333,498">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.666666666667,-438"
+              Start="0,0"
+              End="108.666666666667,-430.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-13.0718281053644" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-13.0718281053644"
+                    Point2="0,-17.0718281053644"
+                    Point3="4,-17.0718281053644" />
+                  <mssgle:LineSegment
+                    End="104.666666666667,-17.0718281053644" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.666666666667,-17.0718281053644"
+                    Point2="108.666666666667,-17.0718281053644"
+                    Point3="108.666666666667,-21.0718281053644" />
+                  <mssgle:LineSegment
+                    End="108.666666666667,-430.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 15]"
+          TopLeft="821,60">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="28.5,23"
+              Start="0,0"
+              End="28.5,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,5.33579335793358" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,5.33579335793358"
+                    Point2="0,9.33579335793358"
+                    Point3="4,9.33579335793358" />
+                  <mssgle:LineSegment
+                    End="24.5,9.33579335793358" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.5,9.33579335793358"
+                    Point2="28.5,9.33579335793358"
+                    Point3="28.5,13.3357933579336" />
+                  <mssgle:LineSegment
+                    End="28.5,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 16]"
+          TopLeft="851,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25"
+              Start="0,0"
+              End="0,17.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 17]"
+          TopLeft="854.75,192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 18]"
+          TopLeft="857.75,257">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11124,26 +11395,26 @@ where [refTable].[Id] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="114,-258"
+              EndConnector="97,-259"
               Start="0,0"
-              End="114,-250.5">
+              End="97,-251.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-24.2738853503184" />
+                    End="0,-23.7749469214438" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-24.2738853503184"
-                    Point2="0,-28.2738853503184"
-                    Point3="4,-28.2738853503184" />
+                    Point1="0,-23.7749469214438"
+                    Point2="0,-27.7749469214438"
+                    Point3="4,-27.7749469214438" />
                   <mssgle:LineSegment
-                    End="110,-28.2738853503184" />
+                    End="93,-27.7749469214438" />
                   <mssgle:CubicBezierSegment
-                    Point1="110,-28.2738853503184"
-                    Point2="114,-28.2738853503184"
-                    Point3="114,-32.2738853503184" />
+                    Point1="93,-27.7749469214438"
+                    Point2="97,-27.7749469214438"
+                    Point3="97,-31.7749469214438" />
                   <mssgle:LineSegment
-                    End="114,-250.5" />
+                    End="97,-251.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11154,7 +11425,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="605.5,265">
+          TopLeft="584.5,263">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11176,18 +11447,18 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="603.75,63">
+          TopLeft="580.75,62">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,27"
+              EndConnector="0,26"
               Start="0,0"
-              End="0,19.5">
+              End="0,18.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.5" />
+                    End="0,18.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11198,7 +11469,7 @@ where [refTable].[Id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="605,132">
+          TopLeft="584,130">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -11210,148 +11481,6 @@ where [refTable].[Id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="161,42"
-          Id="Package\Truncate Address"
-          TopLeft="767,22" />
-        <NodeLayout
-          Size="172,42"
-          Id="Package\Truncate Venue"
-          TopLeft="823,219" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="657.333333333333,500">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="133.166666666667,-436"
-              Start="0,0"
-              End="133.166666666667,-428.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-10.0836685438456" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-10.0836685438456"
-                    Point2="0,-14.0836685438456"
-                    Point3="4,-14.0836685438456" />
-                  <mssgle:LineSegment
-                    End="129.166666666667,-14.0836685438456" />
-                  <mssgle:CubicBezierSegment
-                    Point1="129.166666666667,-14.0836685438456"
-                    Point2="133.166666666667,-14.0836685438456"
-                    Point3="133.166666666667,-18.0836685438456" />
-                  <mssgle:LineSegment
-                    End="133.166666666667,-428.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="873,64">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="28.5,23"
-              Start="0,0"
-              End="28.5,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,5.33579335793358" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,5.33579335793358"
-                    Point2="0,9.33579335793358"
-                    Point3="4,9.33579335793358" />
-                  <mssgle:LineSegment
-                    End="24.5,9.33579335793358" />
-                  <mssgle:CubicBezierSegment
-                    Point1="24.5,9.33579335793358"
-                    Point2="28.5,9.33579335793358"
-                    Point3="28.5,13.3357933579336" />
-                  <mssgle:LineSegment
-                    End="28.5,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 16]"
-          TopLeft="903,129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25"
-              Start="0,0"
-              End="0,17.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 17]"
-          TopLeft="906.75,196">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 18]"
-          TopLeft="909.75,261">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11367,15 +11496,15 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow Address">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="116,42"
-          Id="Package\Data Flow Address\Address"
-          TopLeft="347,51" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Address\OLE DB Destination"
           TopLeft="323,209" />
+        <NodeLayout
+          Size="116,42"
+          Id="Package\Data Flow Address\Address"
+          TopLeft="347,51" />
         <EdgeLayout
           Id="Package\Data Flow Address.Paths[OLE DB Source Output]"
           TopLeft="406.75,93">
@@ -11395,17 +11524,45 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Address\Address">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Address\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Data Flow Course">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Course\OLE DB Destination"
@@ -11433,7 +11590,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -11669,17 +11828,17 @@ where [refTable].[Id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="137,42"
-          Id="Package\Data Flow GeoLocation\GeoLocation"
-          TopLeft="378,60" />
+          Size="171,42"
+          Id="Package\Data Flow GeoLocation\OLE DB Destination"
+          TopLeft="199,325" />
         <NodeLayout
           Size="159,42"
           Id="Package\Data Flow GeoLocation\Postcode Lookup"
           TopLeft="374,166" />
         <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow GeoLocation\OLE DB Destination"
-          TopLeft="199,325" />
+          Size="137,42"
+          Id="Package\Data Flow GeoLocation\GeoLocation"
+          TopLeft="378,60" />
         <EdgeLayout
           Id="Package\Data Flow GeoLocation.Paths[OLE DB Source Output]"
           TopLeft="450,102">
@@ -11699,7 +11858,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11741,6 +11902,55 @@ where [refTable].[Id] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow GeoLocation\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow GeoLocation\Postcode Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Tribal].[GeoLocation]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow GeoLocation\GeoLocation">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Data Flow LearningAim">
     <LayoutInfo>
@@ -11847,9 +12057,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -11951,7 +12159,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Provider]</Value>
+          type="q3:string">[Tribal].[Provider]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12080,7 +12288,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[ProviderUser]</Value>
+          type="q3:string">[Tribal].[ProviderUser]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12196,7 +12404,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[AspNetRoles]</Value>
+          type="q3:string">[Identity].[AspNetRoles]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12338,7 +12546,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[AspNetUserRoles]</Value>
+          type="q3:string">[Identity].[AspNetUserRoles]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12369,14 +12577,6 @@ where [refTable].[Id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="166,42"
-          Id="Package\Data Flow Users\OLE DB Command"
-          TopLeft="504,312" />
-        <NodeLayout
-          Size="113,42"
-          Id="Package\Data Flow Users\UserId Lookup"
-          TopLeft="343,144" />
-        <NodeLayout
           Size="138,42"
           Id="Package\Data Flow Users\AspNetUsers"
           TopLeft="331,19" />
@@ -12384,42 +12584,10 @@ where [refTable].[Id] = ?</property>
           Size="171,42"
           Id="Package\Data Flow Users\OLE DB Destination"
           TopLeft="96,291" />
-        <EdgeLayout
-          Id="Package\Data Flow Users.Paths[Lookup Match Output]"
-          TopLeft="417,186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170,126"
-              Start="0,0"
-              End="170,118.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.4554973821989" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,47.4554973821989"
-                    Point2="0,51.4554973821989"
-                    Point3="4,51.4554973821989" />
-                  <mssgle:LineSegment
-                    End="166,51.4554973821989" />
-                  <mssgle:CubicBezierSegment
-                    Point1="166,51.4554973821989"
-                    Point2="170,51.4554973821989"
-                    Point3="170,55.4554973821989" />
-                  <mssgle:LineSegment
-                    End="170,118.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="36.80861328125,56.4554973821989,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="113,42"
+          Id="Package\Data Flow Users\UserId Lookup"
+          TopLeft="343,144" />
         <EdgeLayout
           Id="Package\Data Flow Users.Paths[OLE DB Source Output]"
           TopLeft="399.75,61">
@@ -12478,6 +12646,46 @@ where [refTable].[Id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="175,42"
+          Id="Package\Data Flow Users\OLE DB Command 1"
+          TopLeft="516,293" />
+        <EdgeLayout
+          Id="Package\Data Flow Users.Paths[Lookup Match Output]"
+          TopLeft="417,186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.5,107"
+              Start="0,0"
+              End="186.5,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.696335078534" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,39.696335078534"
+                    Point2="0,43.696335078534"
+                    Point3="4,43.696335078534" />
+                  <mssgle:LineSegment
+                    End="182.5,43.696335078534" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182.5,43.696335078534"
+                    Point2="186.5,43.696335078534"
+                    Point3="186.5,47.696335078534" />
+                  <mssgle:LineSegment
+                    End="186.5,99.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="45.05861328125,48.696335078534,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -12518,7 +12726,7 @@ where [refTable].[Id] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[AspNetUsers]</Value>
+          type="q3:string">[Identity].[AspNetUsers]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -12569,69 +12777,7 @@ where [refTable].[Id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Address\Address">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Address\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow GeoLocation\GeoLocation">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow GeoLocation\Postcode Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[GeoLocation]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow GeoLocation\OLE DB Destination">
+    design-time-name="Package\Data Flow Venue\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12645,19 +12791,6 @@ where [refTable].[Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Venue\Venue">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Venue\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
