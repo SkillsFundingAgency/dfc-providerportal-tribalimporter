@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="86"
-  DTS:VersionGUID="{5DC1F988-2939-4B8A-B21F-630523AE6CD0}">
+  DTS:VersionBuild="87"
+  DTS:VersionGUID="{5C458906-2787-4FC3-86F6-EFC3E10B9476}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6895,7 +6895,7 @@ where [refTable].[ProviderId] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [Tribal].[Provider] SET ProviderName = ?, Ukprn = ?, [Loans24Plus] = ?, [RecordStatusId] = ?, UPIN = ?, TradingName = ?, NationalApprenticeshipProvider = ?, MarketingInformation = ?, Email = ?, Website = ?, Telephone = ? WHERE ProviderId = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE [Tribal].[Provider] SET ProviderName = ?, Ukprn = ?, [Loans24Plus] = ?, [RecordStatusId] = ?, UPIN = ?, TradingName = ?, NationalApprenticeshipProvider = ?, MarketingInformation = ?, Email = ?, Website = ?, Telephone = ?, ProviderNameAlias = ? WHERE ProviderId = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6990,10 +6990,17 @@ where [refTable].[ProviderId] = ?</property>
                       externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[Telephone]" />
                     <inputColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProviderNameAlias]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="ProviderNameAlias"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[ProviderNameAlias]" />
+                    <inputColumn
                       refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].Columns[ProviderId]"
                       cachedDataType="i4"
                       cachedName="ProviderId"
-                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      externalMetadataColumnId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[ProviderId]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -7127,8 +7134,20 @@ where [refTable].[ProviderId] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
-                      dataType="i4"
+                      dataType="wstr"
+                      length="200"
                       name="Param_11">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_12]"
+                      dataType="i4"
+                      name="Param_12">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -13257,6 +13276,18 @@ where [refTable].[Id] = ?</property>
           Id="Package\Data Flow Address"
           TopLeft="766,83" />
         <NodeLayout
+          Size="199,42"
+          Id="Package\Data Flow Apprenticeship"
+          TopLeft="1024,295" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Data Flow ApprenticeshipLocation"
+          TopLeft="1012,430" />
+        <NodeLayout
+          Size="301,42"
+          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode"
+          TopLeft="983,499" />
+        <NodeLayout
           Size="162,42"
           Id="Package\Data Flow Course"
           TopLeft="504,289" />
@@ -13280,6 +13311,10 @@ where [refTable].[Id] = ?</property>
           Size="188,42"
           Id="Package\Data Flow LearningAim"
           TopLeft="229,321" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Data Flow Location"
+          TopLeft="1036,360" />
         <NodeLayout
           Size="168,42"
           Id="Package\Data Flow Provider"
@@ -13309,6 +13344,18 @@ where [refTable].[Id] = ?</property>
           Id="Package\Truncate Address"
           TopLeft="715,18" />
         <NodeLayout
+          Size="193,42"
+          Id="Package\Truncate Apprenticeship"
+          TopLeft="942,16" />
+        <NodeLayout
+          Size="233,42"
+          Id="Package\Truncate ApprenticeshipLocation"
+          TopLeft="991,82" />
+        <NodeLayout
+          Size="188,53"
+          Id="Package\Truncate ApprenticeshipLocationDeliveryMode"
+          TopLeft="1021,147" />
+        <NodeLayout
           Size="156,42"
           Id="Package\Truncate Course"
           TopLeft="506,221" />
@@ -13328,6 +13375,10 @@ where [refTable].[Id] = ?</property>
           Size="182,42"
           Id="Package\Truncate LearningAim"
           TopLeft="229,229" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Truncate Location"
+          TopLeft="1034,226" />
         <NodeLayout
           Size="172,42"
           Id="Package\Truncate Venue"
@@ -13611,6 +13662,40 @@ where [refTable].[Id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 19]"
+          TopLeft="919.666666666667,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50,-251"
+              Start="0,0"
+              End="50,-243.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-19.7718613615368" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-19.7718613615368"
+                    Point2="0,-23.7718613615368"
+                    Point3="4,-23.7718613615368" />
+                  <mssgle:LineSegment
+                    End="46,-23.7718613615368" />
+                  <mssgle:CubicBezierSegment
+                    Point1="46,-23.7718613615368"
+                    Point2="50,-23.7718613615368"
+                    Point3="50,-27.7718613615368" />
+                  <mssgle:LineSegment
+                    End="50,-243.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="320.583333333333,105">
           <EdgeLayout.Curve>
@@ -13624,6 +13709,172 @@ where [refTable].[Id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 20]"
+          TopLeft="1069.33333333333,58">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38.1666666666667,24"
+              Start="0,0"
+              End="38.1666666666667,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,5.71839671120247" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,5.71839671120247"
+                    Point2="0,9.71839671120247"
+                    Point3="4,9.71839671120247" />
+                  <mssgle:LineSegment
+                    End="34.1666666666667,9.71839671120247" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.1666666666667,9.71839671120247"
+                    Point2="38.1666666666667,9.71839671120247"
+                    Point3="38.1666666666667,13.7183967112025" />
+                  <mssgle:LineSegment
+                    End="38.1666666666667,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 21]"
+          TopLeft="1111.25,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 22]"
+          TopLeft="1115.25,200">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26"
+              Start="0,0"
+              End="0,18.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 23]"
+          TopLeft="1115.5,268">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 24]"
+          TopLeft="1118,337">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,23"
+              Start="0,0"
+              End="0,15.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 25]"
+          TopLeft="1122.25,472">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27"
+              Start="0,0"
+              End="0,19.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 26]"
+          TopLeft="1120.25,402">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28"
+              Start="0,0"
+              End="0,20.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13798,238 +14049,6 @@ where [refTable].[Id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="193,42"
-          Id="Package\Truncate Apprenticeship"
-          TopLeft="942,16" />
-        <NodeLayout
-          Size="233,42"
-          Id="Package\Truncate ApprenticeshipLocation"
-          TopLeft="991,82" />
-        <NodeLayout
-          Size="188,53"
-          Id="Package\Truncate ApprenticeshipLocationDeliveryMode"
-          TopLeft="1021,147" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Truncate Location"
-          TopLeft="1034,226" />
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Data Flow Apprenticeship"
-          TopLeft="1024,295" />
-        <NodeLayout
-          Size="238,42"
-          Id="Package\Data Flow ApprenticeshipLocation"
-          TopLeft="1012,430" />
-        <NodeLayout
-          Size="301,42"
-          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode"
-          TopLeft="983,499" />
-        <NodeLayout
-          Size="169,42"
-          Id="Package\Data Flow Location"
-          TopLeft="1036,360" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 19]"
-          TopLeft="919.666666666667,309">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50,-251"
-              Start="0,0"
-              End="50,-243.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-19.7718613615368" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-19.7718613615368"
-                    Point2="0,-23.7718613615368"
-                    Point3="4,-23.7718613615368" />
-                  <mssgle:LineSegment
-                    End="46,-23.7718613615368" />
-                  <mssgle:CubicBezierSegment
-                    Point1="46,-23.7718613615368"
-                    Point2="50,-23.7718613615368"
-                    Point3="50,-27.7718613615368" />
-                  <mssgle:LineSegment
-                    End="50,-243.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 20]"
-          TopLeft="1069.33333333333,58">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="38.1666666666667,24"
-              Start="0,0"
-              End="38.1666666666667,16.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,5.71839671120247" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,5.71839671120247"
-                    Point2="0,9.71839671120247"
-                    Point3="4,9.71839671120247" />
-                  <mssgle:LineSegment
-                    End="34.1666666666667,9.71839671120247" />
-                  <mssgle:CubicBezierSegment
-                    Point1="34.1666666666667,9.71839671120247"
-                    Point2="38.1666666666667,9.71839671120247"
-                    Point3="38.1666666666667,13.7183967112025" />
-                  <mssgle:LineSegment
-                    End="38.1666666666667,16.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 21]"
-          TopLeft="1111.25,124">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 22]"
-          TopLeft="1115.25,200">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26"
-              Start="0,0"
-              End="0,18.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 23]"
-          TopLeft="1115.5,268">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 25]"
-          TopLeft="1122.25,472">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,27"
-              Start="0,0"
-              End="0,19.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 24]"
-          TopLeft="1118,337">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,23"
-              Start="0,0"
-              End="0,15.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 26]"
-          TopLeft="1120.25,402">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28"
-              Start="0,0"
-              End="0,20.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -14088,6 +14107,198 @@ where [refTable].[Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Address\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Apprenticeship">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Data Flow Apprenticeship\Apprenticeship"
+          TopLeft="435,64" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Apprenticeship\OLE DB Destination"
+          TopLeft="432,247" />
+        <EdgeLayout
+          Id="Package\Data Flow Apprenticeship.Paths[OLE DB Source Output]"
+          TopLeft="510.25,106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,141"
+              Start="0,0"
+              End="0,133.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,133.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Apprenticeship\Apprenticeship">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Apprenticeship\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow ApprenticeshipLocation">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation"
+          TopLeft="425,66" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow ApprenticeshipLocation\OLE DB Destination"
+          TopLeft="432,240" />
+        <EdgeLayout
+          Id="Package\Data Flow ApprenticeshipLocation.Paths[OLE DB Source Output]"
+          TopLeft="518.25,108">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,132"
+              Start="0,0"
+              End="0,124.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,124.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow ApprenticeshipLocation\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="251,42"
+          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode"
+          TopLeft="453,71" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination"
+          TopLeft="491,272" />
+        <EdgeLayout
+          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode.Paths[OLE DB Source Output]"
+          TopLeft="577.5,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,159"
+              Start="0,0"
+              End="0,151.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,151.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14559,6 +14770,70 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
+    design-time-name="Package\Data Flow Location">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Data Flow Location\Location"
+          TopLeft="454,58" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Location\OLE DB Destination"
+          TopLeft="428,210" />
+        <EdgeLayout
+          Id="Package\Data Flow Location.Paths[OLE DB Source Output]"
+          TopLeft="513.25,100">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,110"
+              Start="0,0"
+              End="0,102.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Location\Location">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Location\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Data Flow Provider">
     <LayoutInfo>
       <GraphLayout
@@ -14598,9 +14873,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15338,262 +15611,6 @@ where [refTable].[Id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Venue\Venue">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Apprenticeship">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Data Flow Apprenticeship\Apprenticeship"
-          TopLeft="435,64" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Apprenticeship\OLE DB Destination"
-          TopLeft="432,247" />
-        <EdgeLayout
-          Id="Package\Data Flow Apprenticeship.Paths[OLE DB Source Output]"
-          TopLeft="510.25,106">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,141"
-              Start="0,0"
-              End="0,133.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,133.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow ApprenticeshipLocation">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation"
-          TopLeft="425,66" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow ApprenticeshipLocation\OLE DB Destination"
-          TopLeft="432,240" />
-        <EdgeLayout
-          Id="Package\Data Flow ApprenticeshipLocation.Paths[OLE DB Source Output]"
-          TopLeft="518.25,108">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,132"
-              Start="0,0"
-              End="0,124.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,124.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="251,42"
-          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode"
-          TopLeft="453,71" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination"
-          TopLeft="491,272" />
-        <EdgeLayout
-          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode.Paths[OLE DB Source Output]"
-          TopLeft="577.5,113">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,159"
-              Start="0,0"
-              End="0,151.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,151.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <TaskHost
-    design-time-name="Package\Data Flow Location">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Data Flow Location\Location"
-          TopLeft="454,58" />
-        <NodeLayout
-          Size="171,42"
-          Id="Package\Data Flow Location\OLE DB Destination"
-          TopLeft="428,210" />
-        <EdgeLayout
-          Id="Package\Data Flow Location.Paths[OLE DB Source Output]"
-          TopLeft="513.25,100">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,110"
-              Start="0,0"
-              End="0,102.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,102.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Apprenticeship\Apprenticeship">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Apprenticeship\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Location\Location">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Location\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipLocation\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
