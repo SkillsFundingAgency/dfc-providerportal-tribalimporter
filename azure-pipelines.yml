@@ -4,7 +4,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Continuous Deployment - HDD - 250ACU'
+  name: 'Continuous Deployment - HDD - 250ACU'
 
 steps:
 - task: BuildSSIS@1
