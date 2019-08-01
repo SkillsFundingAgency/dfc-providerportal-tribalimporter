@@ -19,14 +19,14 @@ steps:
 
 - task: CopyFiles@2
   inputs:
+    SourceFolder: $(Agent.BuildDirectory)
     Contents: '**\*.ispac'
     TargetFolder: '$(BuildArtifactStagingDirectory)'
-  displayName: 'CopyFiles to '
+  displayName: 'CopyFiles to BuildArtifactStagingDirectory'
   
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
-
 
