@@ -1,6 +1,5 @@
 # dfc-providerportal-tribalimporter
 
-
 trigger:
 - master
 
@@ -15,3 +14,25 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: BuildSSIS@1
+  inputs:
+    solnPath: 'TribalToNCS-Importer.sln'
+    solnConfigName: 'Development'
+    projPath: '/src/TribalToNCS-Importer/TribalToNCS-Importer.dtproj'
+    projConfigName: 'Development'
+    cmdSwitch: 'build'
+    devenvVersion: 'hostedVS2017'
+  displayName: 'BuildSSIS - tribalimporter'
+
+- task: CopyFiles@2
+  inputs:
+    Contents: '**\*.ispac'
+    TargetFolder: '$(BuildArtifactStagingDirectory)'
+  displayName: 'CopyFiles to '
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
