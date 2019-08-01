@@ -9,9 +9,9 @@ pool:
 steps:
 - task: BuildSSIS@1
   inputs:
-    solnPath: '/TribalToNCS-Importer.sln'
+    solnPath: 'TribalToNCS-Importer.sln'
     solnConfigName: 'Development'
-    projPath: '/src/TribalToNCS-Importer/TribalToNCS-Importer.dtproj'
+    projPath: 'src/TribalToNCS-Importer/TribalToNCS-Importer.dtproj'
     projConfigName: 'Development'
     cmdSwitch: 'build'
     devenvVersion: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe'
