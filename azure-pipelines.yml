@@ -1,0 +1,32 @@
+# dfc-providerportal-tribalimporter
+
+trigger:
+- master
+
+pool:
+  name: 'Hosted VS2017'
+
+steps:
+- task: BuildSSIS@1
+  inputs:
+    solnPath: 'TribalToNCS-Importer.sln'
+    solnConfigName: 'Development'
+    projPath: 'src/TribalToNCS-Importer/TribalToNCS-Importer.dtproj'
+    projConfigName: 'Development'
+    cmdSwitch: 'build'
+    devenvVersion: 'hostedVS2017'
+  displayName: 'BuildSSIS - tribalimporter'
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: $(Agent.BuildDirectory)
+    Contents: '**\*.ispac'
+    TargetFolder: $(Build.ArtifactStagingDirectory)
+  displayName: 'CopyFiles to Build.ArtifactStagingDirectory'
+  
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+
