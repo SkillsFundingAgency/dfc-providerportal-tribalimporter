@@ -14,7 +14,7 @@ steps:
     projPath: 'src/TribalToNCS-Importer/TribalToNCS-Importer.dtproj'
     projConfigName: 'Development'
     cmdSwitch: 'build'
-    devenvVersion: 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe'
+    devenvVersion: 'VS2015'
   displayName: 'BuildSSIS - tribalimporter'
 
 - task: CopyFiles@2
