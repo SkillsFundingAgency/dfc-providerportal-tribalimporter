@@ -1,0 +1,76 @@
+{
+  "parameters": [
+    {
+      "Name": "CM...ConnectionString",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM...Password",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM...SqlServerName",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM...TargetServerVersion",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM...UserName",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM...UseWindowsAuthentication",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.SourceConnection.ConnectionString",
+      "Value": "Data Source=.;Initial Catalog=SFA_CourseDirectory_v190314;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;"
+    },
+    {
+      "Name": "CM.SourceConnection.InitialCatalog",
+      "Value": "SFA_CourseDirectory"
+    },
+    {
+      "Name": "CM.SourceConnection.Password",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.SourceConnection.RetainSameConnection",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.SourceConnection.ServerName",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.SourceConnection.UserName",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.TargetConnection.ConnectionString",
+      "Value": "Data Source=.;Initial Catalog=dfc-coursedirectory;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;"
+    },
+    {
+      "Name": "CM.TargetConnection.InitialCatalog",
+      "Value": "dfc-coursedirectory"
+    },
+    {
+      "Name": "CM.TargetConnection.Password",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.TargetConnection.RetainSameConnection",
+      "Value": "false"
+    },
+    {
+      "Name": "CM.TargetConnection.ServerName",
+      "Value": "$(Param.blah)"
+    },
+    {
+      "Name": "CM.TargetConnection.UserName",
+      "Value": "$(Param.blah)"
+    }
+  ]
+}
