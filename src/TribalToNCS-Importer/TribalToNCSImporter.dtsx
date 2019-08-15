@@ -7,12 +7,12 @@
   DTS:CreatorName="TORNADO\ToloFreak"
   DTS:DTSID="{AF66CB83-98C0-4F63-B7E4-C2CB290811D3}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
   DTS:LocaleID="2057"
   DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="87"
-  DTS:VersionGUID="{5C458906-2787-4FC3-86F6-EFC3E10B9476}">
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{00008670-AE26-4FA5-B14A-940CF6CEB388}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,26 +24,6 @@
       <DTS:ObjectData>
         <SMOServerConnectionManager
           ConnectionString="SqlServerName=.;UseWindowsAuthentication=True;UserName=;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SourceConnection]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{6D827CCF-866B-457E-88B9-61C3A5567267}"
-      DTS:ObjectName="SourceConnection">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=SFA_CourseDirectory_v190314;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[TargetConnection]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
-      DTS:ObjectName="TargetConnection">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=dfc-coursedirectory;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -114,8 +94,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Address\Address.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -405,8 +385,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Address\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -629,8 +609,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Apprenticeship\Apprenticeship.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1070,8 +1050,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Apprenticeship\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1384,8 +1364,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1666,8 +1646,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow ApprenticeshipLocation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1890,8 +1870,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2022,8 +2002,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2162,8 +2142,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Course\Course.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2696,8 +2676,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Course\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3064,8 +3044,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstance\CourseInstance.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3856,8 +3836,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstance\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4368,8 +4348,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstanceStartDate\CourseInstanceStartDate.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4554,8 +4534,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstanceStartDate\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4724,8 +4704,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstanceVenue\CourseInstanceVenue.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4856,8 +4836,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow CourseInstanceVenue\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4996,8 +4976,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow GeoLocation\GeoLocation.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5185,8 +5165,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow GeoLocation\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5351,8 +5331,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow GeoLocation\Postcode Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -5504,8 +5484,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow LearningAim\LearningAim.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5867,8 +5847,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow LearningAim\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6139,8 +6119,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Location\Location.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6511,8 +6491,8 @@ where [refTable].[Postcode] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Location\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6806,8 +6786,8 @@ where [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Provider\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -6904,8 +6884,8 @@ where [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Provider\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7249,8 +7229,8 @@ where [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Provider\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8060,8 +8040,8 @@ where [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Provider\Provider.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9495,8 +9475,8 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow ProviderUser\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -9642,8 +9622,8 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow ProviderUser\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9759,8 +9739,8 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow ProviderUser\ProviderUser.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -9916,8 +9896,8 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Roles\AspNetRoles.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10111,8 +10091,8 @@ where [refTable].[UserId] = ? and [refTable].[ProviderId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Roles\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10290,8 +10270,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Roles\RoleId Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -10443,8 +10423,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow UserRoles\AspNetUserRoles.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10592,8 +10572,8 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow UserRoles\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -10740,8 +10720,8 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow UserRoles\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -10889,8 +10869,8 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Users\AspNetUsers.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -11436,8 +11416,8 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Users\OLE DB Command 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -11654,8 +11634,8 @@ where [refTable].[UserId] = ? and [refTable].[RoleId] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Users\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12057,8 +12037,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Users\UserId Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -12223,8 +12203,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Venue\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[TargetConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[TargetConnection]"
+                  connectionManagerID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[TargetConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -12498,8 +12478,8 @@ where [refTable].[Id] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Venue\Venue.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
-                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerID="{6D827CCF-866B-457E-88B9-61C3A5567267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[SourceConnection]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -14122,7 +14102,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow Apprenticeship">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="148,42"
           Id="Package\Data Flow Apprenticeship\Apprenticeship"
@@ -14150,7 +14130,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14186,15 +14168,15 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow ApprenticeshipLocation">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation"
-          TopLeft="425,66" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow ApprenticeshipLocation\OLE DB Destination"
           TopLeft="432,240" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\Data Flow ApprenticeshipLocation\ApprenticeshipLocation"
+          TopLeft="425,66" />
         <EdgeLayout
           Id="Package\Data Flow ApprenticeshipLocation.Paths[OLE DB Source Output]"
           TopLeft="518.25,108">
@@ -14214,7 +14196,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14250,15 +14234,15 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow ApprenticeshipLocationDeliveryMode">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="251,42"
-          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode"
-          TopLeft="453,71" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\OLE DB Destination"
           TopLeft="491,272" />
+        <NodeLayout
+          Size="251,42"
+          Id="Package\Data Flow ApprenticeshipLocationDeliveryMode\ApprenticeshipLocationDeliveryMode"
+          TopLeft="453,71" />
         <EdgeLayout
           Id="Package\Data Flow ApprenticeshipLocationDeliveryMode.Paths[OLE DB Source Output]"
           TopLeft="577.5,113">
@@ -14278,7 +14262,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14773,15 +14759,15 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow Location">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="118,42"
-          Id="Package\Data Flow Location\Location"
-          TopLeft="454,58" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Location\OLE DB Destination"
           TopLeft="428,210" />
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Data Flow Location\Location"
+          TopLeft="454,58" />
         <EdgeLayout
           Id="Package\Data Flow Location.Paths[OLE DB Source Output]"
           TopLeft="513.25,100">
@@ -14801,7 +14787,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14839,10 +14827,6 @@ where [refTable].[Id] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Data Flow Provider\Provider"
-          TopLeft="351,52" />
-        <NodeLayout
           Size="166,42"
           Id="Package\Data Flow Provider\OLE DB Command"
           TopLeft="597,374" />
@@ -14850,6 +14834,10 @@ where [refTable].[Id] = ?</property>
           Size="113,42"
           Id="Package\Data Flow Provider\Lookup"
           TopLeft="367,192" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Data Flow Provider\Provider"
+          TopLeft="351,52" />
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Provider\OLE DB Destination"
@@ -14873,7 +14861,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14952,19 +14942,6 @@ where [refTable].[Id] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Provider\Provider">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Provider\Lookup">
     <Properties>
       <Property>
@@ -14984,6 +14961,19 @@ where [refTable].[Id] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Provider\Provider">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -15427,9 +15417,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
