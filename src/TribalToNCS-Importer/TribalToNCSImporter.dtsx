@@ -11,22 +11,10 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{00008670-AE26-4FA5-B14A-940CF6CEB388}">
+  DTS:VersionBuild="90"
+  DTS:VersionGUID="{5E64F4B4-76D1-4F14-B354-5A99B0DA6D37}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[.]"
-      DTS:CreationName="SMOServer"
-      DTS:DTSID="{56973D4E-32E4-4560-B8BB-8733324675D3}"
-      DTS:ObjectName=".">
-      <DTS:ObjectData>
-        <SMOServerConnectionManager
-          ConnectionString="SqlServerName=.;UseWindowsAuthentication=True;UserName=;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -15417,7 +15405,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
