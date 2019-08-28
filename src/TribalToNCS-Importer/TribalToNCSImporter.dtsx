@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="90"
-  DTS:VersionGUID="{5E64F4B4-76D1-4F14-B354-5A99B0DA6D37}">
+  DTS:VersionBuild="91"
+  DTS:VersionGUID="{9C34FBFD-DAC3-4701-9161-EF450DD9E282}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -2352,6 +2352,16 @@
                       lineageId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].Columns[UcasTariffPoints]"
                       name="UcasTariffPoints"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      length="128"
+                      lineageId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      name="CosmosId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2457,6 +2467,11 @@
                       refId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].ExternalColumns[UcasTariffPoints]"
                       dataType="i4"
                       name="UcasTariffPoints" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Course\Course.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      name="CosmosId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2588,6 +2603,12 @@
                       dataType="i4"
                       lineageId="Package\Data Flow Course\Course.Outputs[OLE DB Source Error Output].Columns[UcasTariffPoints]"
                       name="UcasTariffPoints" />
+                    <outputColumn
+                      refId="Package\Data Flow Course\Course.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Course\Course.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      name="CosmosId" />
                     <outputColumn
                       refId="Package\Data Flow Course\Course.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -3382,6 +3403,16 @@
                       lineageId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].Columns[DisplayedByOrganisationId]"
                       name="DisplayedByOrganisationId"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      length="128"
+                      lineageId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      name="CosmosId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3545,6 +3576,11 @@
                       refId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].ExternalColumns[DisplayedByOrganisationId]"
                       dataType="i4"
                       name="DisplayedByOrganisationId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      name="CosmosId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3748,6 +3784,12 @@
                       dataType="i4"
                       lineageId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Error Output].Columns[DisplayedByOrganisationId]"
                       name="DisplayedByOrganisationId" />
+                    <outputColumn
+                      refId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      name="CosmosId" />
                     <outputColumn
                       refId="Package\Data Flow CourseInstance\CourseInstance.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -5610,6 +5652,16 @@ where [refTable].[Postcode] = ?</property>
                       lineageId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].Columns[QualificationLevelId]"
                       name="QualificationLevelId"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].Columns[LearningAimRefTypeId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].ExternalColumns[LearningAimRefTypeId]"
+                      length="4"
+                      lineageId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].Columns[LearningAimRefTypeId]"
+                      name="LearningAimRefTypeId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5676,6 +5728,11 @@ where [refTable].[Postcode] = ?</property>
                       refId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].ExternalColumns[QualificationLevelId]"
                       dataType="i4"
                       name="QualificationLevelId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Output].ExternalColumns[LearningAimRefTypeId]"
+                      dataType="wstr"
+                      length="4"
+                      name="LearningAimRefTypeId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5759,6 +5816,12 @@ where [refTable].[Postcode] = ?</property>
                       dataType="i4"
                       lineageId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Error Output].Columns[QualificationLevelId]"
                       name="QualificationLevelId" />
+                    <outputColumn
+                      refId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Error Output].Columns[LearningAimRefTypeId]"
+                      dataType="wstr"
+                      length="4"
+                      lineageId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Error Output].Columns[LearningAimRefTypeId]"
+                      name="LearningAimRefTypeId" />
                     <outputColumn
                       refId="Package\Data Flow LearningAim\LearningAim.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -8673,6 +8736,25 @@ where [refTable].[ProviderId] = ?</property>
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[TASRefreshOverride]"
                       name="TASRefreshOverride"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      length="128"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      name="CosmosId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[MigratedToNewPortal]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].ExternalColumns[MigratedToNewPortal]"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].Columns[MigratedToNewPortal]"
+                      name="MigratedToNewPortal"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -8971,6 +9053,15 @@ where [refTable].[ProviderId] = ?</property>
                       refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].ExternalColumns[TASRefreshOverride]"
                       dataType="bool"
                       name="TASRefreshOverride" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      name="CosmosId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Output].ExternalColumns[MigratedToNewPortal]"
+                      dataType="bool"
+                      name="MigratedToNewPortal" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -9341,6 +9432,17 @@ where [refTable].[ProviderId] = ?</property>
                       dataType="bool"
                       lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[TASRefreshOverride]"
                       name="TASRefreshOverride" />
+                    <outputColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      name="CosmosId" />
+                    <outputColumn
+                      refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[MigratedToNewPortal]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[MigratedToNewPortal]"
+                      name="MigratedToNewPortal" />
                     <outputColumn
                       refId="Package\Data Flow Provider\Provider.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -12630,6 +12732,25 @@ where [refTable].[Id] = ?</property>
                       lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].Columns[BulkUploadVenueId]"
                       name="BulkUploadVenueId"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      length="128"
+                      lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].Columns[CosmosId]"
+                      name="CosmosId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].Columns[AddedByApplicationId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].ExternalColumns[AddedByApplicationId]"
+                      lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].Columns[AddedByApplicationId]"
+                      name="AddedByApplicationId"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -12707,6 +12828,15 @@ where [refTable].[Id] = ?</property>
                       dataType="wstr"
                       length="255"
                       name="BulkUploadVenueId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].ExternalColumns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      name="CosmosId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Output].ExternalColumns[AddedByApplicationId]"
+                      dataType="i4"
+                      name="AddedByApplicationId" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -12804,6 +12934,17 @@ where [refTable].[Id] = ?</property>
                       length="255"
                       lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[BulkUploadVenueId]"
                       name="BulkUploadVenueId" />
+                    <outputColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[CosmosId]"
+                      name="CosmosId" />
+                    <outputColumn
+                      refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[AddedByApplicationId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[AddedByApplicationId]"
+                      name="AddedByApplicationId" />
                     <outputColumn
                       refId="Package\Data Flow Venue\Venue.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -14288,7 +14429,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow Course">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow Course\OLE DB Destination"
@@ -14316,9 +14457,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14354,7 +14493,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow CourseInstance">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="171,42"
           Id="Package\Data Flow CourseInstance\OLE DB Destination"
@@ -14382,9 +14521,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14681,7 +14818,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow LearningAim">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="137,42"
           Id="Package\Data Flow LearningAim\LearningAim"
@@ -14709,9 +14846,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14849,9 +14984,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15538,7 +15671,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow Venue">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="108,42"
           Id="Package\Data Flow Venue\Venue"
@@ -15566,9 +15699,7 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
