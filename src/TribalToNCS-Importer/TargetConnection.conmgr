@@ -3,10 +3,8 @@
   DTS:ObjectName="TargetConnection"
   DTS:DTSID="{4D5ED40F-4017-44F3-9B5B-15A12697D02C}"
   DTS:CreationName="OLEDB">
-  <DTS:PropertyExpression
-    DTS:Name="ConnectionString">@[$Project::TargetConnection_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="Data Source=localhost;Initial Catalog=dfc-coursedirectory;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
+      DTS:ConnectionString="Data Source=DESKTOP-83H16QG\SQLEXPRESS;Initial Catalog=dfc-coursedirectory;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
