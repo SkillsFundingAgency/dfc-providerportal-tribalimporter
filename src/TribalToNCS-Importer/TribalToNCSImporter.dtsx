@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="TribalToNCSImporter"
   DTS:PackageType="5"
-  DTS:VersionBuild="112"
-  DTS:VersionGUID="{6284ECA9-7B39-4235-8B69-68CB0E93FD39}">
+  DTS:VersionBuild="114"
+  DTS:VersionGUID="{A0121E3C-9267-4025-9FCD-1818C2BF9D45}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3566,46 +3566,46 @@ order by  [QAComplianceFailureReasonId]</property>
                       cachedDataType="i4"
                       cachedName="ApprenticeshipId"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[ApprenticeshipId]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[ApprenticeshipId]" />
-                    <inputColumn
-                      refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[CreatedByUserId]"
-                      cachedDataType="wstr"
-                      cachedLength="128"
-                      cachedName="CreatedByUserId"
-                      externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedByUserId]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedByUserId]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipId]" />
                     <inputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[CreatedDateTimeUtc]"
                       cachedDataType="dbTimeStamp"
                       cachedName="CreatedDateTimeUtc"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDateTimeUtc]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedDateTimeUtc]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[CreatedDateTimeUtc]" />
                     <inputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[TextQAd]"
                       cachedDataType="wstr"
                       cachedLength="900"
                       cachedName="TextQAd"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[TextQAd]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[TextQAd]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[TextQAd]" />
                     <inputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[Passed]"
                       cachedDataType="bool"
                       cachedName="Passed"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[Passed]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[Passed]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[Passed]" />
                     <inputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[DetailsOfQA]"
                       cachedDataType="wstr"
                       cachedLength="1000"
                       cachedName="DetailsOfQA"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[DetailsOfQA]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[DetailsOfQA]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[DetailsOfQA]" />
                     <inputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[ApprenticeshipQAStyleId]"
                       cachedDataType="i4"
                       cachedName="ApprenticeshipQAStyleId"
                       externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[ApprenticeshipQAStyleId]"
-                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[ApprenticeshipQAStyleId]" />
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipQAStyleId]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].Columns[UserName]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="UserName"
+                      externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedByUserEmail]"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[UserName]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3617,11 +3617,6 @@ order by  [QAComplianceFailureReasonId]</property>
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[ApprenticeshipId]"
                       dataType="i4"
                       name="ApprenticeshipId" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedByUserId]"
-                      dataType="wstr"
-                      length="128"
-                      name="CreatedByUserId" />
                     <externalMetadataColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDateTimeUtc]"
                       dataType="dbTimeStamp"
@@ -3640,6 +3635,11 @@ order by  [QAComplianceFailureReasonId]</property>
                       dataType="wstr"
                       length="1000"
                       name="DetailsOfQA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input].ExternalColumns[CreatedByUserEmail]"
+                      dataType="wstr"
+                      length="280"
+                      name="CreatedByUserEmail" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3661,6 +3661,341 @@ order by  [QAComplianceFailureReasonId]</property>
                       refId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[CreatedByUserId]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="CreatedByUserId"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedByUserId]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[ApprenticeshipQAStyleId]"
+                      cachedDataType="i4"
+                      cachedName="ApprenticeshipQAStyleId"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[ApprenticeshipQAStyleId]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[ApprenticeshipId]"
+                      cachedDataType="i4"
+                      cachedName="ApprenticeshipId"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[ApprenticeshipId]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[CreatedDateTimeUtc]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDateTimeUtc"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedDateTimeUtc]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[TextQAd]"
+                      cachedDataType="wstr"
+                      cachedLength="900"
+                      cachedName="TextQAd"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[TextQAd]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[Passed]"
+                      cachedDataType="bool"
+                      cachedName="Passed"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[Passed]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[DetailsOfQA]"
+                      cachedDataType="wstr"
+                      cachedLength="1000"
+                      cachedName="DetailsOfQA"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[DetailsOfQA]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Right Input].Columns[Id]"
+                      cachedDataType="wstr"
+                      cachedLength="128"
+                      cachedName="Id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Right Input].Columns[UserName]"
+                      cachedDataType="wstr"
+                      cachedLength="256"
+                      cachedName="UserName"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[UserName]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output]"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipQAStyleId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipQAStyleId]"
+                      name="ApprenticeshipQAStyleId">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[ApprenticeshipQAStyleId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipId]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[ApprenticeshipId]"
+                      name="ApprenticeshipId">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[ApprenticeshipId]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[CreatedDateTimeUtc]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[CreatedDateTimeUtc]"
+                      name="CreatedDateTimeUtc">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[CreatedDateTimeUtc]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[TextQAd]"
+                      dataType="wstr"
+                      length="900"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[TextQAd]"
+                      name="TextQAd">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[TextQAd]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[Passed]"
+                      dataType="bool"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[Passed]"
+                      name="Passed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[Passed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[DetailsOfQA]"
+                      dataType="wstr"
+                      length="1000"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[DetailsOfQA]"
+                      name="DetailsOfQA">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input].Columns[DetailsOfQA]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[UserName]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output].Columns[UserName]"
+                      name="UserName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Right Input].Columns[UserName]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source 1"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[AspNetUsers]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [Id],
+      [UserName]
+  FROM [SFA_CourseDirectory].[dbo].[AspNetUsers]
+order by id</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnection]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnection]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output]"
+                  isSorted="true"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      length="128"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      sortKeyPosition="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[UserName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[UserName]"
+                      length="256"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].Columns[UserName]"
+                      name="UserName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="wstr"
+                      length="128"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output].ExternalColumns[UserName]"
+                      dataType="wstr"
+                      length="256"
+                      name="UserName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="wstr"
+                      length="128"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[UserName]"
+                      dataType="wstr"
+                      length="256"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[UserName]"
+                      name="UserName" />
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3693,7 +4028,15 @@ order by  [QAComplianceFailureReasonId]</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT [ApprenticeshipQAStyleId]
+      ,[ApprenticeshipId]
+      ,[CreatedByUserId]
+      ,[CreatedDateTimeUtc]
+      ,[TextQAd]
+      ,[Passed]
+      ,[DetailsOfQA]
+  FROM [SFA_CourseDirectory].[dbo].[ApprenticeshipQAStyle]
+  order by CreatedByUserId</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3710,7 +4053,7 @@ order by  [QAComplianceFailureReasonId]</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -3727,6 +4070,7 @@ order by  [QAComplianceFailureReasonId]</property>
               <outputs>
                 <output
                   refId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output]"
+                  isSorted="true"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
@@ -3756,6 +4100,7 @@ order by  [QAComplianceFailureReasonId]</property>
                       length="128"
                       lineageId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedByUserId]"
                       name="CreatedByUserId"
+                      sortKeyPosition="1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output].Columns[CreatedDateTimeUtc]"
@@ -3894,8 +4239,18 @@ order by  [QAComplianceFailureReasonId]</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow ApprenticeshipQaStyle.Paths[OLE DB Source Output]"
+              refId="Package\Data Flow ApprenticeshipQaStyle.Paths[Merge Join Output]"
               endId="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow ApprenticeshipQaStyle.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Right Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow ApprenticeshipQaStyle.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow ApprenticeshipQaStyle\Merge Join.Inputs[Merge Join Left Input]"
               name="OLE DB Source Output"
               startId="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle.Outputs[OLE DB Source Output]" />
           </paths>
@@ -17437,7 +17792,7 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow ApprenticeshipQaStyle">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="220,42.2857142857143"
           Id="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle"
@@ -17445,36 +17800,122 @@ where [refTable].[Id] = ?</property>
         <NodeLayout
           Size="240.571428571429,42.2857142857143"
           Id="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle"
-          TopLeft="241.396831821933,128.720500200592" />
+          TopLeft="249.015879642816,265.341621753559" />
+        <NodeLayout
+          Size="159.428571428572,42.2857142857143"
+          Id="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1"
+          TopLeft="508.888902369841,34.8819884816087" />
+        <NodeLayout
+          Size="130.285714285715,42.2857142857143"
+          Id="Package\Data Flow ApprenticeshipQaStyle\Merge Join"
+          TopLeft="415.555566564019,142.757767674732" />
         <EdgeLayout
           Id="Package\Data Flow ApprenticeshipQaStyle.Paths[OLE DB Source Output]"
-          TopLeft="362.825403401881,75.8757772680041">
+          TopLeft="363.968260696115,75.8757772680041">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.844722932588"
+              EndConnector="116.730163010761,66.8819904067277"
               Start="0,0"
-              End="0,45.344722932588">
+              End="116.730163010761,59.3819904067277">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.344722932588" />
+                    End="0,29.4409952033638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.4409952033638"
+                    Point2="0,33.4409952033638"
+                    Point3="4,33.4409952033638" />
+                  <mssgle:LineSegment
+                    End="112.730163010761,33.4409952033638" />
+                  <mssgle:CubicBezierSegment
+                    Point1="112.730163010761,33.4409952033638"
+                    Point2="116.730163010761,33.4409952033638"
+                    Point3="116.730163010761,37.4409952033638" />
+                  <mssgle:LineSegment
+                    End="116.730163010761,59.3819904067277" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow ApprenticeshipQaStyle.Paths[OLE DB Source Output1]"
+          TopLeft="588.603188084127,77.167702767323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-87.5238119962985,65.5900649074088"
+              Start="0,0"
+              End="-87.5238119962985,58.0900649074088">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.8766069295213" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.8766069295213"
+                    Point2="0,38.8766069295213"
+                    Point3="-4,38.8766069295213" />
+                  <mssgle:LineSegment
+                    End="-83.5238119962985,38.8766069295213" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-83.5238119962985,38.8766069295213"
+                    Point2="-87.5238119962985,38.8766069295213"
+                    Point3="-87.5238119962985,42.8766069295213" />
+                  <mssgle:LineSegment
+                    End="-87.5238119962985,58.0900649074088" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow ApprenticeshipQaStyle.Paths[Merge Join Output]"
+          TopLeft="480.698423706876,185.043481960446">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-111.396829778345,80.2981397931132"
+              Start="0,0"
+              End="-111.396829778345,72.7981397931132">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.1490698965566" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1490698965566"
+                    Point2="0,40.1490698965566"
+                    Point3="-4,40.1490698965566" />
+                  <mssgle:LineSegment
+                    End="-107.396829778345,40.1490698965566" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-107.396829778345,40.1490698965566"
+                    Point2="-111.396829778345,40.1490698965566"
+                    Point3="-111.396829778345,44.1490698965566" />
+                  <mssgle:LineSegment
+                    End="-111.396829778345,72.7981397931132" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle">
+    design-time-name="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -17487,7 +17928,7 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipQaStyle\Source ApprenticeshipQaStyle">
+    design-time-name="Package\Data Flow ApprenticeshipQaStyle\Destination ApprenticeshipQaStyle">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -17503,57 +17944,23 @@ where [refTable].[Id] = ?</property>
     design-time-name="Package\Data Flow ApprenticeshipQAStyleFailureReason">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="185.142857142858,42.2857142857143"
-          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source QaStyleReason"
-          TopLeft="414.706360046616,34.2453423598442" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="286.857142857143,42.2857142857143"
           Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source ApprenticeshipQAStyleFailureReason"
           TopLeft="25.0793657437411,30.3602492339927" />
         <NodeLayout
-          Size="307.428571428572,42.2857142857143"
-          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Destination ApprenticeshipQAStyleFailureReason"
-          TopLeft="131.531749370447,266.145969487576" />
+          Size="185.142857142858,42.2857142857143"
+          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source QaStyleReason"
+          TopLeft="414.706360046616,34.2453423598442" />
         <NodeLayout
           Size="130.285714285715,42.2857142857143"
           Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Merge Join"
           TopLeft="267.55556262822,148.248451046837" />
-        <EdgeLayout
-          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason.Paths[Merge Join Output]"
-          TopLeft="332.698419771077,190.534165332551">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-47.452384686344,75.6118041550247"
-              Start="0,0"
-              End="-47.452384686344,68.1118041550247">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.8059020775124" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.8059020775124"
-                    Point2="0,37.8059020775124"
-                    Point3="-4,37.8059020775124" />
-                  <mssgle:LineSegment
-                    End="-43.452384686344,37.8059020775124" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-43.452384686344,37.8059020775124"
-                    Point2="-47.452384686344,37.8059020775124"
-                    Point3="-47.452384686344,41.8059020775124" />
-                  <mssgle:LineSegment
-                    End="-47.452384686344,68.1118041550247" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="307.428571428572,42.2857142857143"
+          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason\Destination ApprenticeshipQAStyleFailureReason"
+          TopLeft="131.531749370447,266.145969487576" />
         <EdgeLayout
           Id="Package\Data Flow ApprenticeshipQAStyleFailureReason.Paths[OLE DB Source Output1]"
           TopLeft="168.507937172313,72.645963519707">
@@ -17585,7 +17992,9 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17619,14 +18028,52 @@ where [refTable].[Id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow ApprenticeshipQAStyleFailureReason.Paths[Merge Join Output]"
+          TopLeft="332.698419771077,190.534165332551">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-47.452384686344,75.6118041550247"
+              Start="0,0"
+              End="-47.452384686344,68.1118041550247">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8059020775124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.8059020775124"
+                    Point2="0,37.8059020775124"
+                    Point3="-4,37.8059020775124" />
+                  <mssgle:LineSegment
+                    End="-43.452384686344,37.8059020775124" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-43.452384686344,37.8059020775124"
+                    Point2="-47.452384686344,37.8059020775124"
+                    Point3="-47.452384686344,41.8059020775124" />
+                  <mssgle:LineSegment
+                    End="-47.452384686344,68.1118041550247" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source QaStyleReason">
+    design-time-name="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source ApprenticeshipQAStyleFailureReason">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -17639,7 +18086,7 @@ where [refTable].[Id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source ApprenticeshipQAStyleFailureReason">
+    design-time-name="Package\Data Flow ApprenticeshipQAStyleFailureReason\Source QaStyleReason">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -18977,6 +19424,14 @@ where [refTable].[Id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow ApprenticeshipQaStyle\OLE DB Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
