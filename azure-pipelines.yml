@@ -4,7 +4,7 @@ trigger:
 - master
 
 pool:
-  name: 'Hosted VS2017'
+  name: 'NCS - CI and CD'
 
 steps:
 - task: BuildSSIS@1
