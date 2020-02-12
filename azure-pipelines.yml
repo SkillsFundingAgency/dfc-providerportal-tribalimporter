@@ -2,6 +2,7 @@
 
 trigger:
 - master
+- dev
 
 pool:
   name: 'NCS - CI and CD'
